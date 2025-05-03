@@ -4,7 +4,10 @@ import Stats from './components/home/Stats';
 import Advantages from './components/home/Advantages';
 import Timeline from './components/Timeline';
 
+export const dynamic = 'force-dynamic'
+
 export default function Home() {
+  
   const cardsData = [
     {
       id: 1,
