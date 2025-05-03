@@ -1,8 +1,4 @@
-import Card from './components/Card';
-import HeroSection from './components/home/HeroSection';
-import Stats from './components/home/Stats';
-import Advantages from './components/home/Advantages';
-import Timeline from './components/Timeline';
+import Card from '../components/Card';
 
 export default function Home() {
   const cardsData = [
@@ -28,33 +24,28 @@ export default function Home() {
 
   return (
     <>
-      <HeroSection />
-      <Stats />
-      
-      <section className="max-w-6xl mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
-          Основы атомной энергетики
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {cardsData.map((card) => (
-            <Card
-              key={card.id}
-              title={card.title}
-              shortDesc={card.shortDesc}
-              fullDesc={card.fullDesc}
-            />
-          ))}
-        </div>
-      </section>
+      <div className="bg-gradient-to-r from-blue-600 to-gray-800 text-white py-16 px-4 rounded-lg shadow-lg mb-12 text-center">
+        <h1 className="text-4xl font-bold mb-4">Атомная Энергетика - Энергия Будущего</h1>
+        <p className="text-xl opacity-90">Изучите мир чистой и эффективной ядерной энергии</p>
+      </div>
 
-      <Advantages />
-      
-      <section className="bg-white py-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
-            История атомной энергетики
-          </h2>
-          <Timeline />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        {cardsData.map((card) => (
+          <Card
+            key={card.id}
+            title={card.title}
+            shortDesc={card.shortDesc}
+            fullDesc={card.fullDesc}
+          />
+        ))}
+      </div>
+
+      <section className="bg-white p-8 rounded-lg shadow-md">
+        <h2 className="text-2xl font-bold text-gray-800 mb-6">Атомная энергетика в России</h2>
+        <div className="space-y-4 text-gray-700">
+          <p>
+            Россия является одним из мировых лидеров в области атомной энергетики. Государственная корпорация "Росатом" объединяет более 350 предприятий и научных учреждений.
+          </p>
         </div>
       </section>
     </>
